@@ -1,0 +1,281 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: Arial, sans-serif, Lato !important;
+}
+.fas {
+  font-size: 26px;
+  color: black;
+}
+.lblAntal {
+  font-size: 13px !important;
+  background: #fff !important;
+  color: black !important;
+  padding: 0 6px !important;
+  vertical-align: top !important;
+  margin-left: -10px !important;
+}
+button:focus,
+.button:active {
+  outline: none !important;
+  box-shadow: none;
+}
+p {
+  font-size: 17px;
+  line-height: 25px !important;
+}
+.price {
+  line-height: 40px !important;
+}
+#ul-meny > li {
+  font-size: 17px;
+  line-height: 25px !important;
+  padding: 0 5px;
+}
+.sticky {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35) !important;
+}
+.shadows {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35) !important;
+}
+nav.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+}
+.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-family: Arial, Helvetica, sans-serif, Lato !important;
+  margin-left: 10%;
+}
+.nav-item-active {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  color: black;
+  font-weight: bold;
+}
+#nav > a:hover {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  color: black;
+}
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  vertical-align: middle;
+  font-weight: 400;
+}
+button > i {
+  pointer-events: none;
+}
+.noteringar {
+  display: none;
+  margin-top: 5%;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.5);
+  background-color: #dedede;
+  position: fixed;
+  z-index: 200;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35) !important;
+}
+.highlght {
+  border: 2px solid red;
+}
+.animateDelete {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.4s, opacity 0.4s linear;
+}
+.noteringar > form {
+  display: grid;
+}
+@media screen and (max-width: 600px) {
+  table#cart tbody td .form-control {
+    display: inline !important;
+  }
+  .actions .btn {
+    width: 36%;
+  }
+  .actions .btn-info {
+    float: left;
+  }
+  .actions .btn-danger {
+    float: right;
+    margin-bottom: 10px;
+  }
+
+  table#cart thead {
+    display: none;
+  }
+  table#cart tbody td {
+    display: block;
+    padding: 0.6rem;
+    min-width: 320px;
+  }
+  table#cart tbody tr td:first-child {
+    background: #fff;
+    color: black;
+  }
+  table#cart tbody td:before {
+    content: attr(data-th);
+    font-weight: bold;
+    display: inline-block;
+    width: 8rem;
+  }
+  table#cart tfoot td {
+    display: block;
+  }
+  table#cart tfoot td .btn {
+    display: block;
+  }
+}
+.sticky-cart-button {
+  height: 64px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border: none;
+  z-index: 100;
+  font-size: 15px;
+  width: 100%;
+  background-color: #dedede !important;
+}
+.sticky-icon {
+  position: absolute;
+  top: 0;
+  margin-top: 19px;
+  left: 0;
+  padding: 0 13px;
+}
+.sticky-price {
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 64px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 16px;
+}
+#overlay {
+  font-size: 1rem;
+  font-weight: 300;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 9;
+  overflow-y: scroll;
+  display: none;
+  border: 1px solid silver;
+}
+
+tr > th,
+td,
+p {
+  font-size: 20px !important;
+}
+select {
+  padding: 6px !important;
+  outline: none;
+  font-size: 20px !important;
+}
+
+@media (min-width: 320px) {
+  .pizza-icon {
+    padding-bottom: 0.2em;
+    margin-top: 1px;
+  }
+  select {
+    margin-left: 20% !important;
+    margin-top: 2% !important;
+  }
+  form > h2 {
+    font-size: 1.6rem;
+    margin-left: 2px;
+  }
+  #warning-text {
+    font-size: 19px !important;
+  }
+}
+@media (min-width: 375px) {
+  select {
+    margin-left: 25% !important;
+    margin-top: 2% !important;
+  }
+  form > h2 {
+    font-size: 1.96rem;
+  }
+  #warning-text {
+    font-size: 23px !important;
+  }
+}
+@media (min-width: 414px) {
+  select {
+    margin-left: 28% !important;
+    margin-top: 2% !important;
+  }
+  form > h2 {
+    font-size: 2.2rem;
+    margin-left: 1px;
+  }
+  #warning-text {
+    font-size: 25px !important;
+  }
+}
+@media (min-width: 768px) {
+  select {
+    margin-left: 0% !important;
+    margin-top: 0% !important;
+  }
+  .Bordsnummer {
+    display: flex;
+    justify-content: center;
+  }
+  form > h2 {
+    font-size: 2.9rem;
+    margin-left: 1px;
+  }
+  .noteringar {
+    margin-left: 16% !important;
+  }
+  #warning-text {
+    font-size: 16px !important;
+  }
+}
+@media (min-width: 1024px) {
+  form > h2 {
+    font-size: 3.8rem;
+    margin-left: 1px;
+  }
+  .noteringar {
+    margin-left: 18% !important;
+  }
+  #warning-text {
+    font-size: 26px !important;
+  }
+}
+@media (min-width: 1140px) {
+  form > h2 {
+    font-size: 2.5rem;
+    margin-left: 1px;
+  }
+  .noteringar {
+    margin-left: 39% !important;
+  }
+  #warning-text {
+    font-size: 32px !important;
+  }
+}

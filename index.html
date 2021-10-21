@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <title>Restaurang</title>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-md navbar-light"
+      style="background-color: #dedede; height: 60px;"
+    >
+      <i class="fas fa-pizza-slice pizza-icon"></i>
+      <h2 class="loggo-name">
+        <a
+          class="navbar-brand font-weight-bold ml-1 loggo"
+          href="index.html"
+          style="font-size: 27px;"
+        >
+          Restaurang
+        </a>
+      </h2>
+
+      <i id="checkout" class="fas fa-shopping-basket ml-auto mb-1"></i>
+      <span class="badge badge-warning mb-4 lblAntal" id="lblAntal"> </span>
+    </nav>
+
+    <div class="noteringar">
+      <form class="p-0">
+        <h2 class="mb-3 col-12 p-0">Vill du tillägga något?</h2>
+        <div class="form-row">
+          <div class="form-group col-md-12">
+            <input
+              class="form-control"
+              id="Noteringar"
+              placeholder="Specialbestbällningar"
+            />
+          </div>
+        </div>
+        <button id="submit" type="submit" class="btn btn-success mb-3">
+          Bekräfta
+        </button>
+        <button id="cancel"  class="btn btn-danger">
+          Avbryt beställning
+        </button>
+      </form>
+    </div>
+
+    <img
+      src="media/pizza.jpg"
+      alt="pizza-picture"
+      style="max-height: 40em; width: 100%;"
+    />
+
+    <div class="nav-wrapper shadows mt-0" style="height: 56px;">
+      <nav class="navbar-light scrollmenu bg-white" id="nav">
+        <a class="navbar-brand">Pizzor klass 1</a>
+        <a class="navbar-brand">Pizzor klass 2</a>
+        <a class="navbar-brand">Pizzor klass 3</a>
+        <a class="navbar-brand">Såser</a>
+        <a class="navbar-brand">Dryck</a>
+      </nav>
+    </div>
+
+    <div class="container mt-2" id="content">
+      <!--                          Pizzor klass 1                                      -->
+      <div class="row mt-4 border-bottom border-secondary mb-5">
+        <header class="figure-header mb-2 col-lg-12">
+          <h3 class="figure-title">Pizzor klass 1</h3>
+        </header>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Margherita</h4>
+              <p class="card-text">Tomatsås, Ost</p>
+              <p class="card-text font-weight-bold price">
+                65 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Vesuvio</h4>
+              <p class="card-text">Tomatsås, Ost, Skinka</p>
+              <p class="card-text font-weight-bold price">
+                65 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-5 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Altono</h4>
+              <p class="card-text">Tomatsås, Ost, Skinka</p>
+              <p class="card-text font-weight-bold price">
+                65 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--                          Pizzor klass 2                                     -->
+      <div class="row mt-4 border-bottom border-secondary mb-5">
+        <header class="figure-header mb-2 col-lg-12">
+          <h3 class="figure-title">Pizzor klass 2</h3>
+        </header>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Calzone</h4>
+              <p class="card-text">Tomatsås, Ost, Skinka</p>
+              <p class="card-text font-weight-bold price">
+                80 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Capricciosa</h4>
+              <p class="card-text">Tomatsås, Ost, Skinka, Champinjoner</p>
+              <p class="card-text font-weight-bold price">
+                70 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Tomaso</h4>
+              <p class="card-text">Tomatsås, Ost, Skinka, <b>Räkor</b></p>
+              <p class="card-text font-weight-bold price">
+                70 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Hawaii</h4>
+              <p class="card-text">Tomatsås, Ost, Skinka, Ananas</p>
+              <p class="card-text font-weight-bold price">
+                70 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Oriental</h4>
+              <p class="card-text">Tomatsås, Ost, Skinka, Köttfärs</p>
+              <p class="card-text font-weight-bold price">
+                70 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Venezia</h4>
+              <p class="card-text">Tomatsås, Ost, Skinka, Tonfisk</p>
+              <p class="card-text font-weight-bold price">
+                70 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Bolognese</h4>
+              <p class="card-text">Tomatsås, Ost, Köttfärs, Lök</p>
+              <p class="card-text font-weight-bold price">
+                70 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-5 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Napoli</h4>
+              <p class="card-text">Tomatsås, Ost, Räkor, Champinjoner</p>
+              <p class="card-text font-weight-bold price">
+                70 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--                          Pizzor klass 3                                      -->
+      <div class="row mt-4 border-bottom border-secondary mb-5">
+        <header class="figure-header mb-2 col-lg-12">
+          <h3 class="figure-title">Pizzor klass 3</h3>
+        </header>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Bravo</h4>
+              <p class="card-text">
+                Tomatsås, Ost, Skinka, Bacon, Lök, <b>Ägg</b>
+              </p>
+              <p class="card-text font-weight-bold price">
+                75 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Princessa</h4>
+              <p class="card-text">
+                Tomatsås, Ost, Skinka, <b>Räkor</b>, Champinjoner
+              </p>
+              <p class="card-text font-weight-bold price">
+                75 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Kroppkärr</h4>
+              <p class="card-text">
+                Tomatsås, Ost, Skinka, Köttfärs, Champinjoner
+              </p>
+              <p class="card-text font-weight-bold price">
+                75 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Afrikano</h4>
+              <p class="card-text">
+                Tomatsås, Ost, Skinka, Ananas, Curry, Banan
+              </p>
+              <p class="card-text font-weight-bold price">
+                75 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Önska</h4>
+              <p class="card-text">
+                Tomatsås, Ost, Skinka, <b>Räkor</b>, Champinjoner
+              </p>
+              <p class="card-text font-weight-bold price">
+                85 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Lambada</h4>
+              <p class="card-text">Tomatsås, Ost, Skinka, Köttfärs, Räkor</p>
+              <p class="card-text font-weight-bold price">
+                75 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Alsterdalen</h4>
+              <p class="card-text">
+                Tomatsås, Ost, Skinka, <b>Crabbfish</b>, <b>Räkor</b>
+              </p>
+              <p class="card-text font-weight-bold price">
+                75 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Paradis</h4>
+              <p class="card-text">
+                Tomatsås, Ost, Skinka, <b>Räkor</b>, Ananas
+              </p>
+              <p class="card-text font-weight-bold price">
+                75 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Roma</h4>
+              <p class="card-text">
+                Tomatsås, Ost, Skinka, Kantareller, Tomater (färska)
+              </p>
+              <p class="card-text font-weight-bold price">
+                75 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Banjogatan</h4>
+              <p class="card-text">Tomatsås, Ost, Skinka, Salami, Paprika</p>
+              <p class="card-text font-weight-bold price">
+                75 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Rimini</h4>
+              <p class="card-text">
+                Tomatsås, Ost, Köttfärs, Gorgonzolaost, Lök
+              </p>
+              <p class="card-text font-weight-bold price">
+                75 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Opera</h4>
+              <p class="card-text">
+                Tomatsås, Ost, Köttfärs, Ananas, Curry, Banan
+              </p>
+              <p class="card-text font-weight-bold price">
+                75 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-5 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Mesopotamia</h4>
+              <p class="card-text">
+                Tomatsås, Ost, Salami, Köttfärs, <b>Nötter</b>
+              </p>
+              <p class="card-text font-weight-bold price">
+                75 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--                         Såser                            -->
+      <div class="row mt-4 border-bottom border-secondary mb-5">
+        <header class="figure-header mb-2 col-lg-12">
+          <h3 class="figure-title">Såser</h3>
+        </header>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Bearnaisesås</h4>
+              <p class="card-text">10 cl</p>
+              <p class="card-text font-weight-bold price">
+                10 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Kebabsås mild</h4>
+              <p class="card-text">10 cl</p>
+              <p class="card-text font-weight-bold price">
+                10 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Kebabsås stark</h4>
+              <p class="card-text">10 cl</p>
+              <p class="card-text font-weight-bold price">
+                10 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Kebabsås blandad</h4>
+              <p class="card-text">10 cl</p>
+              <p class="card-text font-weight-bold price">
+                10 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Tzatzikisås</h4>
+              <p class="card-text">10 cl</p>
+              <p class="card-text font-weight-bold price">
+                10 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-5 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Vitlökssås</h4>
+              <p class="card-text">10 cl</p>
+              <p class="card-text font-weight-bold price">
+                10 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--                         Dryck                           -->
+      <div class="row mt-4 border-bottom border-secondary mb-5">
+        <header class="figure-header mb-2 col-lg-12">
+          <h3 class="figure-title">Dryck</h3>
+        </header>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Drycker Coca-Cola</h4>
+              <p class="card-text">33 cl</p>
+              <p class="card-text font-weight-bold price">
+                15 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Coca-Cola light</h4>
+              <p class="card-text">33 cl</p>
+              <p class="card-text font-weight-bold price">
+                15 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Fanta</h4>
+              <p class="card-text">33 cl</p>
+              <p class="card-text font-weight-bold price">
+                15 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Sprite</h4>
+              <p class="card-text">33 cl</p>
+              <p class="card-text font-weight-bold price">
+                15 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Mineralvatten</h4>
+              <p class="card-text">33 cl</p>
+              <p class="card-text font-weight-bold price">
+                15 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Lättöl</h4>
+              <p class="card-text">33 cl</p>
+              <p class="card-text font-weight-bold price">
+                15 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-4 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Coca-Cola</h4>
+              <p class="card-text">50 cl</p>
+              <p class="card-text font-weight-bold price">
+                20 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div class="card shadows p-1 mb-5 bg-white rounded">
+            <div class="card-body">
+              <h4 class="card-title font-weight-bold">Fanta</h4>
+              <p class="card-text">50 cl</p>
+              <p class="card-text font-weight-bold price">
+                20 kr
+                <button class="btn btn-dark btn-xs float-right shadows-none">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="sticky-cart-button btn">
+      <span class="sticky-icon">
+        <i class="fas fa-shopping-basket"></i>
+        <span class="badge badge-warning count lblAntal" id="lblAntal2"> </span
+      ></span>
+      <span class="font-weight-bold text-uppercase"> Se din varukorg</span>
+      <span
+        class="sticky-price large font-weight-bold"
+        style="font-size: 22px !important;"
+      >
+        <span id="price"> </span> Kr</span
+      >
+    </button>
+
+    <!-- shopping cart-->
+    <div id="overlay" class="container-fluid pl-0 pr-0">
+      <button
+        class="close clearfix btn-large ml-2"
+        style="
+          float: left;
+          font-size: 3em;
+          margin-right: -1em;
+          margin-top: 2px;
+        "
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <br />
+      <h1 class="mt-5 text-center" style="font-size: 49px;">Beställning</h1>
+      <div class="mt-3 Bordsnummer">
+        <h3 class="text-center mr-2">Bordsnummer:</h3>
+        <select class="mdb-select md-form">
+          <option value="0">Välj ett bord! </option>
+        </select>
+      </div>
+      <hr />
+
+      <table id="cart" class="table table-hover table-condensed">
+        <thead>
+          <tr>
+            <th style="width: 10%;">Produkt</th>
+            <th style="width: 10%;">Pris</th>
+            <th style="width: 10%; padding-left: 0px;">Antal</th>
+            <th style="width: 10%;">Notering</th>
+            <th style="width: 3%;"></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+          <tr>
+            <td>
+              <a href="#" class="btn btn-warning"
+                ><i class="fa fa-angle-left"></i> Forsätt handla</a
+              >
+            </td>
+            <td colspan="2" class="hidden-xs" id="warning-text"></td>
+            <td class="text-center large" style="font-size: 24px !important;">
+              <strong
+                >Totalt: <span class="lblTotalt"> </span
+                ><span> Kr</span></strong
+              >
+            </td>
+            <td>
+              <a href="#" id="Kop" class="btn btn-success btn-block"
+                >Bekräfta <i class="fa fa-angle-right"></i
+              ></a>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="js/indes.js"></script>
+    <script src="Javascript/index.js"></script>
+  </body>
+</html>
